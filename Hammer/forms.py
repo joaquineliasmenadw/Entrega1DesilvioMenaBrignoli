@@ -95,7 +95,7 @@ class Empleado_form(forms.ModelForm):
                                     attrs={
                                         'class':'form-control',
                                     }))
-    experiencia = forms.CharField(label='Experiencia:',max_length=2,
+    experiencia = forms.CharField(label='Experiencia:',max_length=50,
                                     widget=forms.TextInput(
                                     attrs={
                                         'class':'form-control',
