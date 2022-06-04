@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Creador de Empleado
+{% endblock %}
+
+
+{% block contenido %}
+
+{% if form %}
+    <div class="container text-center pt-5">
+        <h1>Creacion de Empleado</h1>
+        <p>Por favor, ingrese la informacion solicitada</p>
+        <div class='jumbotron'>
+          <center>
+            <div class="text-left" style="max-width:500px">
+              <form action="" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class='form-group'>
+                  <label for="{{ field.name }}">{{ field.label }}</label>
+                  {{ field }}
+                </div>
+                {% endfor %}
+                <br>
+                <center><button type="submit" class="btn btn-success btn-lg">Registrar empleado</button></center>
+              </form>
+            </div>
+          </center>
+        </div>
+      </div>
+{% elif new_empleado %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Nuevo empleado creado</h4>
+    <p>Se ha añadido el empleado {{new_empleado.nombre}} {{new_empleado.apellido}} correctamente.</p>
+    <hr>
+</div>
+<div class="container text-center pt-5">
+    <h1>Creacion de Empleado</h1>
+    <p>Por favor, ingrese la informacion solicitada</p>
+    <div class='jumbotron'>
+      <center>
+        <div class="text-left" style="max-width:500px">
+          <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form2 %}
+            <div class='form-group'>
+              <label for="{{ field.name }}">{{ field.label }}</label>
+              {{ field }}
+            </div>
+            {% endfor %}
+            <br>
+            <center><button type="submit" class="btn btn-success btn-lg">Registrar empleado</button></center>
+          </form>
+        </div>
+      </center>
+    </div>
+  </div>
+{% endif %}
+
+{% endblock %}

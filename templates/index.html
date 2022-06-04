@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Inicio
+{% endblock %}
+
+{% block contenido %}
+<div class="container text-center pt-5">
+    <div class='jumbotron'>
+        <br>
+        <h1>Servicios</h1>
+        <table  class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Provincia</th>
+                    <th>Ciudad</th>
+                    <th>Empleado</th>
+                    <th>Precio</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for servicio in servicios %}
+                <tr>
+                    <td>{{ servicio.id }}</td>
+                    <td>{{ servicio.nombre }}</td>
+                    <td>{{ servicio.descripcion }}</td>
+                    <td>{{ servicio.provincia }}</td>
+                    <td>{{ servicio.ciudad }}</td>
+                    <td>{{ servicio.empleado }}</td>
+                    <td>{{ servicio.precio }}</td>
+                    <td>{{ servicio.active }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class='jumbotron'>
+        <br>
+        <h1>Empleados</h1>
+        <table  class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Experiencia</th>
+                    <th>Provincia</th>
+                    <th>Ciudad</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleado in empleados %}
+                <tr>
+                    <td>{{ empleado.id }}</td>
+                    <td>{{ empleado.nombre }}</td>
+                    <td>{{ empleado.apellido }}</td>
+                    <td>{{ empleado.fecha_nacimiento }}</td>
+                    <td>{{ empleado.experiencia }}</td>
+                    <td>{{ empleado.provincia }}</td>
+                    <td>{{ empleado.ciudad }}</td>
+                    <td>{{ empleado.telefono }}</td>
+                    <td>{{ empleado.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class='jumbotron'>
+        <br>
+        <h1>Empleadores</h1>
+        <table  class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Provincia</th>
+                    <th>Ciudad</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleador in empleadores %}
+                <tr>
+                    <td>{{ empleador.id }}</td>
+                    <td>{{ empleador.nombre }}</td>
+                    <td>{{ empleador.apellido }}</td>
+                    <td>{{ empleador.fecha_nacimiento }}</td>
+                    <td>{{ empleador.provincia }}</td>
+                    <td>{{ empleador.ciudad }}</td>
+                    <td>{{ empleador.telefono }}</td>
+                    <td>{{ empleador.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Contacto
+{% endblock %}
+
+{% block contenido %}
+
+{% if form %}
+<div class="container text-center pt-5">
+    <h1>Contacto</h1>
+    <p>Por favor, ingrese la informacion solicitada</p>
+    <div class='jumbotron'>
+      <center>
+        <div class="text-left" style="max-width:500px">
+          <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class='form-group'>
+              <label for="{{ field.name }}">{{ field.label }}</label>
+              {{ field }}
+            </div>
+            {% endfor %}
+            <br>
+            <center><button type="submit" class="btn btn-success btn-lg">Enviar</button></center>
+          </form>
+        </div>
+      </center>
+    </div>
+</div>
+{% elif new_contacto %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Se ha cargado la informacion de contacto correctamente</h4>
+    <p>Se envio la informacion de contacto satisfactoriamente. En la brevedad nos contactaremos con usted</p>
+    <hr>
+</div>
+
+{% endif %}
+
+{% endblock %}
