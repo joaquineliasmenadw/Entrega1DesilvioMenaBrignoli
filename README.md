@@ -2,7 +2,6 @@
 Entregable para la entrega intermedia del día 8 de junio
 
 La página web se encuentra dividida en 5 vistas principales y una vista encargada de mostrar el resultado de la búsqueda.
-
 Al ejecutar la aplicación, usted estará parado en la vista “Inicio” donde verá todos los datos cargados en la base para los 3 modelos principales usados(Servicios,Empleados y Empleadores). Estos datos se mostrarán en 3 tablas distintas. Dentro de todas las pantallas, usted verá una Navbar que le permitirá moverse por las distintas vistas de la aplicación.
 
 Contacto, es una funcionalidad que permite la carga de datos a la base para en un futuro ser contactado para recibir más información.
