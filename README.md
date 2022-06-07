@@ -13,4 +13,4 @@ Crear Empleado permite generar un nuevo empleado a la página web, este nuevo em
 
 El último formulario dentro de la página web es la carga del empleador, la cual va a ser la persona encargada de contratar el servicio posteriormente. Para dar de alta un nuevo empleador deberá ingresar la siguiente información:  Nombre, apellido, fecha de nacimiento, provincia, ciudad, teléfono y una dirección de correo electrónico. Una vez dado de alta, se mostrará en pantalla que ha sido creado con éxito y puede si desea cargar otro servicio nuevo o en su defecto moverse por la Navbar a otro apartado, si lo desea, puede ir al inicio y verificar el servicio dado de alta.
 
-Para finalizar con la entrega, la página web posee un buscador de servicios dentro de la Navbar superior, en la cual se deberá ingresar el nombre del servicio, lo redirigirá a una pantalla donde mostrará el resultado de su búsqueda.
+Para finalizar con la entrega, la página web posee un buscador de servicios dentro de la Navbar superior, en la cual se deberá ingresar el nombre del servicio, lo redirigirá a una pantalla donde mostrará el resultado de su búsqueda segun lo que se haya elegido.
