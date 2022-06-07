@@ -94,6 +94,5 @@ def create_servicio_view(request):
 
 def search_servicio_view(request):
     servicios = Servicio.objects.filter(nombre__contains = request.GET['search'])
-    #product = Products.objects.get()
     context = {'servicios':servicios}
     return render(request, 'search_servicio.html', context = context)
